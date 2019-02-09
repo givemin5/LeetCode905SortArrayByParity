@@ -1,14 +1,13 @@
 ﻿using System;
-using ExpectedObjects;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace LeetCode905SortArrayByParity
 {
     [TestClass]
-    public class UnitTest1
+    public class SolutionSortTests
     {
         [TestMethod]
-        public void TestMethod1()
+        public void SolutionSortArrayByParity_3_1_2_4_ShouldBe_2_4_3_1()
         {
             int[] A = new int[]{3,1,2,4};
 
@@ -17,7 +16,7 @@ namespace LeetCode905SortArrayByParity
 
             var expected = new int[] {2, 4, 3, 1};
 
-            expected.ToExpectedObject().ShouldEqual(actual);
+            CollectionAssert.AreEqual(expected, actual);
         }
     }
 }

@@ -10,7 +10,7 @@ namespace LeetCode905SortArrayByParity
     {
         public int[] SortArrayByParity(int[] A)
         {
-            throw new NotImplementedException();
+            return A.OrderBy(x => (x % 2==0)?0:1).ToArray();
         }
     }
 }
